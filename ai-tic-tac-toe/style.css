@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 16px;
+    width: 340px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+#status {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    height: 95px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 12px;
+    font-size: 42px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.cell:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.05);
+}
+
+.cell.X { color: #ffd166; }
+.cell.O { color: #06d6a0; }
+
+.cell.win {
+    background: #06d6a0;
+    color: #000;
+}
+
+button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #ffd166;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffca3a;
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+    .cell { height: 80px; font-size: 36px; }
+}
