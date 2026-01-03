@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+
+<button id="objectid" onclick="newObject()">New Object data Button </button>
+
+    <script>
+
+  let name = "Amaika";
+
+  function newObject(){
+
+  let name = "papun";
+
+
+  let intern = {
+  name: "Mohit",
+  role: "Web Intern",
+  age : 21,
+  InternDetails : function () {
+
+    alert("Name Of Intern : " + this.name + " student City : " );
+    
+
+
+  }
+};
+
+intern.InternDetails();
+
+for(let x in intern){
+
+  console.log(x + ":" + intern[x])
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>

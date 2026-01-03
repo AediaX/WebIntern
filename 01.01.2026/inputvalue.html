@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Intern Registration</h3>
+
+<input type="text" id="name" placeholder="Name" required><br><br>
+<input type="number" id="age" min="18"><br><br>
+<input type="checkbox" id="agree"> I agree<br><br>
+
+<button onclick="submitForm()">Submit</button>
+
+<script>
+function submitForm() {
+  let name = document.getElementById("name").value;
+  let age = document.getElementById("age").value;
+  let agree = document.getElementById("agree").checked;
+
+  if (!agree) {
+    alert("Please agree first");
+    return;
+  }
+
+  console.log(name, age, agree);
+}
+</script>
+
+</body>
+</html>

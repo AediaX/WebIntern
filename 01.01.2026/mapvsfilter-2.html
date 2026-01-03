@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Map & Filter Demo</h3>
+<p id="output"></p>
+
+<script>
+  let numbers = [10, 20, 30, 40];
+
+  let result = numbers
+    .filter(n => n >= 20)
+    .map(n => n * 2);
+
+  document.getElementById("output").innerText = result;
+</script>
+
+</body>
+</html>

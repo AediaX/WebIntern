@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login System</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Username"><br><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+<button onclick="logout()">Logout</button>
+
+<p id="status"></p>
+
+<script>
+  function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (user && pass) {
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("username", user);
+      showStatus();
+    } else {
+      alert("Enter username & password");
+    }
+  }
+
+  function logout() {
+    localStorage.clear();
+    showStatus();
+  }
+
+  function showStatus() {
+    if (localStorage.getItem("isLoggedIn")) {
+      document.getElementById("status").innerText =
+        "Welcome " + localStorage.getItem("username");
+    } else {
+      document.getElementById("status").innerText =
+        "User not logged in";
+    }
+  }
+
+  showStatus(); // check login on page load
+</script>
+
+</body>
+</html>

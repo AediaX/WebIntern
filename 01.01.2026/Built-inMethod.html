@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Method Examples</title>
+</head>
+<body>
+
+    <button onclick="doUpperCase()">Do Upper Case</button>
+
+    <h1 id="data">We are doing online internship class</h1>
+    <h1 id="data1">We are doing online internship class</h1>
+
+    <script>
+        let Data = document.getElementById("data");
+
+        function doUpperCase() {
+            Data.innerText = Data.innerText.toUpperCase();
+            Data.innerText= Data.innerText.toLowerCase();
+            Data.innerText= Data.innerText.toLocaleUpperCase();
+        }
+
+    </script>
+
+</body>
+</html>

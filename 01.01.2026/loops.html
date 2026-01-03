@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All JavaScript Loops</title>
+</head>
+<body>
+
+  <h2>JavaScript Loops Demo</h2>
+  <pre id="output"> </pre>
+
+  <script>
+    let result = "";
+
+    // 1️⃣ FOR LOOP
+    result += "FOR LOOP:\n";
+    for (let i = 1; i <= 3; i++) {
+      result += i + "\n";
+    }
+
+    result += "\n";
+
+    // 2️⃣ WHILE LOOP
+    result += "WHILE LOOP:\n";
+    let j = 1;
+    while (j <= 3) {
+      result += j + "\n";
+      j++;
+    }
+
+    result += "\n";
+
+    // 3️⃣ DO WHILE LOOP
+    result += "DO WHILE LOOP:\n";
+    let k = 1;
+    do {
+      result += k + "\n";
+      k++;
+    } while (k <= 3);
+
+    result += "\n";
+
+    // 4️⃣ FOR...OF LOOP (Array values)
+    result += "FOR...OF LOOP:\n";
+    let skills = ["HTML", "CSS", "JS"];
+    for (let skill of skills) {
+      result += skill + "\n";
+    }
+
+    result += "\n";
+
+    // 5️⃣ FOR...IN LOOP (Object keys)
+    result += "FOR...IN LOOP:\n";
+    let intern = {
+      name: "Amit",
+      role: "Web Intern",
+      company: "AediaX"
+    };
+
+    for (let key in intern) {
+      result += key + " : " + intern[key] + "\n";
+    }
+
+    result += "\n";
+
+    // 6️⃣ FOREACH LOOP (Array method)
+    result += "FOREACH LOOP:\n";
+    skills.forEach(function (item, index) {
+      result += index + " : " + item + "\n";
+    });
+
+    // Display output
+    document.getElementById("output").innerText = result;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Search Skill</h3>
+<input type="text" id="search" placeholder="Search skill">
+<p id="result"></p>
+
+<script>
+  let skills = ["HTML", "CSS", "JavaScript", "React"];
+
+  document.getElementById("search").addEventListener("input", function () {
+    let value = this.value.toLowerCase();
+
+    let found = skills.filter(skill =>
+      skill.toLowerCase().includes(value)
+    );
+
+    document.getElementById("result").innerText = found.join(", ");
+  });
+</script>
+
+</body>
+</html>

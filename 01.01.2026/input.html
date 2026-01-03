@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All HTML Inputs with JavaScript</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+    input, select, textarea, button {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 300px;
+    }
+    button {
+      width: 150px;
+      cursor: pointer;
+    }
+    .output {
+      background: #fff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Intern Registration Form (All Inputs)</h2>
+
+<!-- TEXT -->
+<input type="text" id="name" placeholder="Full Name">
+
+<!-- EMAIL -->
+<input type="email" id="email" placeholder="Email">
+
+<!-- PASSWORD -->
+<input type="password" id="password" placeholder="Password">
+
+<!-- NUMBER -->
+<input type="number" id="age" placeholder="Age" min="18" max="60">
+
+<!-- DATE -->
+<input type="date" id="dob">
+
+<!-- TIME -->
+<input type="time" id="time">
+
+<!-- COLOR -->
+<input type="color" id="favColor">
+
+<!-- RANGE -->
+<input type="range" id="rating" min="0" max="10">
+
+<!-- RADIO -->
+<label>Gender:</label>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+
+<!-- CHECKBOX -->
+<label>
+  <input type="checkbox" id="agree"> I agree to terms
+</label>
+
+<!-- SELECT -->
+<select id="course">
+  <option value="">Select Course</option>
+  <option value="Web Development">Web Development</option>
+  <option value="App Development">App Development</option>
+</select>
+
+<!-- TEXTAREA -->
+<textarea id="message" placeholder="Message"></textarea>
+
+<!-- FILE -->
+<input type="file" id="file">
+
+<!-- BUTTON -->
+<button onclick="submitForm()">Submit</button>
+
+<div class="output" id="output"></div>
+
+<script>
+function submitForm() {
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let age = document.getElementById("age").value;
+  let dob = document.getElementById("dob").value;
+  let time = document.getElementById("time").value;
+  let color = document.getElementById("favColor").value;
+  let rating = document.getElementById("rating").value;
+  let agree = document.getElementById("agree").checked;
+  let course = document.getElementById("course").value;
+  let message = document.getElementById("message").value;
+  let file = document.getElementById("file").files[0];
+
+  let gender = document.querySelector('input[name="gender"]:checked');
+
+  if (!agree) {
+    alert("Please agree to terms");
+    return;
+  }
+
+  let output = `
+    <b>Name:</b> ${name}<br>
+    <b>Email:</b> ${email}<br>
+    <b>Age:</b> ${age}<br>
+    <b>DOB:</b> ${dob}<br>
+    <b>Time:</b> ${time}<br>
+    <b>Color:</b> ${color}<br>
+    <b>Rating:</b> ${rating}<br>
+    <b>Gender:</b> ${gender ? gender.value : ""}<br>
+    <b>Course:</b> ${course}<br>
+    <b>Message:</b> ${message}<br>
+    <b>File:</b> ${file ? file.name : "No file selected"}
+  `;
+
+  document.getElementById("output").innerHTML = output;
+}
+</script>
+
+</body>
+</html>

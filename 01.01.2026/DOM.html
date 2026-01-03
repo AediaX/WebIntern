@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn DOM from AediaX </title>
+</head>
+<body>
+
+
+    <div id="div">
+        <h1>
+         DOM ID Element
+        </h1>
+    </div>
+<hr>
+<br>
+     <div class="div">
+        <h1>
+         DOM Class Element
+        </h1>
+    </div>
+
+    <div class="div">
+        <h1>
+         DOM Class Element
+        </h1>
+    </div>
+<hr>
+<br>
+    <P>
+        Here we are going to learn about tag name and dom operation
+    </P>
+
+
+    
+    <script>
+
+ const IDname = document.getElementById("div");
+
+ IDname.innerHTML = "<h2> Hey ! we are just change our id Element </h2> <br>";
+ IDname.style.color = 'red';
+
+
+
+ const CN = document.getElementsByClassName("div");
+
+ CN[0].innerHTML= "<h5> new Class data </h5>";
+ CN[1].innerHTML= "<h5> new Class data xyz </h5>";
+
+
+
+  const QS = document.querySelectorAll("p");
+  QS[0].style.color= 'blue';
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ClassList Demo</title>
+  <style>
+    .active {
+      color: blue;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="msg">AediaX Intern</p>
+
+  <button onclick="add()">Add</button>
+  <button onclick="remove()">Remove</button>
+  <button onclick="toggle()">Toggle</button>
+  <button onclick="append()"> Append</button>
+
+  <script>
+    let element = document.getElementById("msg");
+
+ 
+    function add() {
+      element.classList.add("active");
+    }
+
+    function remove() {
+      element.classList.remove("active");
+    }
+
+    function toggle() {
+      element.classList.toggle("active");
+    }
+
+    function append(){
+      let div = document.createElement("div");
+      div.innerText = "New Content";
+      document.body.appendChild(div);
+
+
+    }
+  </script>
+
+</body>
+</html>

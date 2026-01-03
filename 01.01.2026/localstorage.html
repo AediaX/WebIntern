@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="saveData()">Save</button>
+<button onclick="showData()">Show</button>
+
+<script>
+  function saveData() {
+    let intern = { name: "Amit", role: "Web Intern" };
+    localStorage.setItem("intern", JSON.stringify(intern));
+    console.log("Data Saved");
+  }
+
+  function showData() {
+    let data = JSON.parse(localStorage.getItem("intern"));
+    console.table(data);
+  }
+</script>
+
+</body>
+</html>

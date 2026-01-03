@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="save()">Save</button>
+<button onclick="read()">Read</button>
+
+<script>
+  function save() {
+    localStorage.setItem("company", "AediaX Tech");
+    alert("Saved");
+  }
+
+  function read() {
+    alert(localStorage.getItem("company"));
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>forEach Loop Example</title>
+</head>
+<body>
+
+  <h3>Intern Skills</h3>
+  <ul id="list"></ul>
+
+  <script>
+    // Array
+    let skills = ["HTML", "CSS", "JavaScript", "React"];
+
+    // forEach loop
+    skills.forEach(function (skill, index) {
+      console.log(index + " : " + skill);
+
+      document.getElementById("list").innerHTML +=
+        "<li>" + skill + "</li>";
+    });
+  </script>
+
+</body>
+</html>

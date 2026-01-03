@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h3>Loop Output</h3>
+
+
+  <button onclick="forofloop()">for of Loop</button>
+
+  <p id="data"> Data will show here....</p>
+
+  <h1>ram</h1>
+  <h1>hari</h1>
+  <h1>amu</h1>
+  <h1>king</h1>
+
+
+
+<script>
+
+let D1= document.getElementById("data");
+
+
+
+let output = "";
+
+
+  function forofloop(){
+ 
+    let data = ["ram", "hari" ,"amu" ,"king " , " Aediax"];
+
+
+    for(let x of data){
+      console.log(x);
+      output = output + x + "<br>";
+
+    }
+
+    D1.innerHTML= output;
+    
+  }
+
+  console.log(output);
+
+</script>
+
+</body>
+</html>

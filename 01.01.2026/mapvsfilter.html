@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map vs Filter</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let interns = [
+  { name: "Amit", marks: 80 },
+  { name: "Ravi", marks: 35 },
+  { name: "Neha", marks: 60 }
+];
+
+let passedInterns = interns
+  .filter(intern => intern.marks >= 40)
+  .map(intern => intern.name);
+
+console.log(passedInterns); // ["Amit", "Neha"]
+
+    </script>
+</body>
+</html>
